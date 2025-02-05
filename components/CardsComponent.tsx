@@ -8,6 +8,7 @@ import SingleImageEditor from "./SingleImageEditor";
 interface Product {
   id: number;
   title: string;
+  ingrediants: string;
   price: number;
   image: string;
 }
