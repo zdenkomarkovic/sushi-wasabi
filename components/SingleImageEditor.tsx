@@ -27,7 +27,7 @@ const SingleImageEditor: React.FC<SingleImageEditorProps> = ({
           className="rounded-lg w-full h-screen object-contain"
         />
         <button
-          className="absolute top-2 right-2 text-primary text-3xl"
+          className="absolute top-10 right-2 text-primary text-3xl"
           onClick={onClose}
         >
           <CircleX />
