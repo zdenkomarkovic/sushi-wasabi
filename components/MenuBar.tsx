@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "@/node_modules/next/image";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import SingleImageEditor from "./SingleImageEditor";
 
 interface Product {
   id: number;
@@ -17,6 +18,8 @@ interface MenuBarProps {
 }
 
 const MenuBar: React.FC<MenuBarProps> = ({ title, products }) => {
+  const [showImage, setShowImage] = useState<string | null>(null);
+
   return (
     <div>
       <div className="container px-4 py-10 mx-auto space-y-10">
@@ -43,13 +46,21 @@ const MenuBar: React.FC<MenuBarProps> = ({ title, products }) => {
                   alt={item.title}
                   width={180}
                   height={100}
-                  className="rounded-lg"
+                  className="rounded-lg cursor-pointer"
+                  onClick={() => setShowImage(item.image)}
                 />
               </motion.div>
             );
           })}
         </div>
       </div>
+
+      {showImage && (
+        <SingleImageEditor
+          imageUrl={showImage}
+          onClose={() => setShowImage(null)}
+        />
+      )}
     </div>
   );
 };
