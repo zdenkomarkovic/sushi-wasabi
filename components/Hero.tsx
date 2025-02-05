@@ -17,7 +17,7 @@ import { PhoneIcon } from "lucide-react";
 
 const BgImage = () => {
   return (
-    <div className="relative flex min-h-[99dvh]">
+    <div className="relative flex min-h-[100dvh]">
       <Carousel
         className="absolute top-0 left-0 w-full h-[100dvh] z-[0]"
         opts={{ loop: true }}
@@ -30,7 +30,7 @@ const BgImage = () => {
           Fade(),
         ]}
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-muted/50 z-[1]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-muted/30 z-[1]" />
         <CarouselContent>
           <CarouselItem>
             <Image
@@ -56,10 +56,8 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
   const words = title.split(" ");
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden ">
       <div className="absolute inset-0">
-        {/* <FloatingPaths position={1} />
-        <FloatingPaths position={-1} /> */}
         <BgImage />
       </div>
 
