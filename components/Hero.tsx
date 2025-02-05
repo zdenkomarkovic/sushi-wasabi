@@ -30,7 +30,7 @@ const BgImage = () => {
           Fade(),
         ]}
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-[1]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-muted/50 z-[1]" />
         <CarouselContent>
           <CarouselItem>
             <Image
