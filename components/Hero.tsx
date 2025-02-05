@@ -108,13 +108,13 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
             >
               <Button
                 variant="ghost"
-                className="rounded-[1.15rem] px-8 py-6 text-lg font-semibold backdrop-blur-md
+                className="rounded-[1.15rem] px-3 md:px-8 py-5 md:py-6 text-base md:text-lg font-semibold backdrop-blur-md
                             bg-green-500/50 hover:bg-white/100 
                             text-black  transition-all duration-300
                             group-hover:-translate-y-0.5 border border-primary 
                             hover:shadow-md "
               >
-                <span className="opacity-90 group-hover:opacity-100 transition-opacity  flex gap-3 items-center">
+                <span className="opacity-90 group-hover:opacity-100 transition-opacity  flex gap-1 md:gap-3 items-center">
                   za dostavu pozovite
                   <PhoneIcon /> +38160 362 0051
                 </span>
@@ -136,7 +136,7 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
           >
             <Button
               variant="ghost"
-              className="rounded-[1.15rem] px-8 py-6 text-lg font-semibold backdrop-blur-md
+              className="rounded-[1.15rem] px-3 md:px-8 py-5 md:py-6 text-base md:text-lg font-semibold backdrop-blur-md
                             bg-green-500/50 hover:bg-white/100 
                             text-black  transition-all duration-300
                             group-hover:-translate-y-0.5 border border-primary 
