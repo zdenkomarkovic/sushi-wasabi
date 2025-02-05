@@ -14,14 +14,8 @@ import {
 } from "@/components/ui/sheet";
 
 import { motion } from "framer-motion";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { navList } from "@/constants/index";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "../ui/accordion";
 
 const mobTitleStyles = "text-lg py-2";
 
@@ -36,39 +30,6 @@ const MobileMenu = () => (
         <SheetContent>
           <ul>
             {navList.map((item, index) => {
-              if (item.list)
-                return (
-                  <Fragment key={index}>
-                    <Accordion type="single" collapsible>
-                      <AccordionItem className="border-none" value="item-1">
-                        <motion.div
-                          whileHover={{ color: "hsl(var(--primary))" }}
-                        >
-                          <AccordionTrigger
-                            className={`${mobTitleStyles} hover:no-underline`}
-                          >
-                            {item.title}
-                          </AccordionTrigger>
-                        </motion.div>
-                        <AccordionContent>
-                          {item.list.map((link, index2) => (
-                            <Link
-                              className="pl-6 block font-light py-2"
-                              key={`${index}.${index2}`}
-                              href={link.link}
-                            >
-                              <motion.li
-                                whileHover={{ color: "hsl(var(--primary))" }}
-                              >
-                                {link.title}
-                              </motion.li>
-                            </Link>
-                          ))}
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  </Fragment>
-                );
               return (
                 <Link key={index} href={item.link}>
                   <motion.li
