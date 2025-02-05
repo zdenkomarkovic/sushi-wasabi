@@ -92,7 +92,13 @@ export default function Header() {
       <nav className="flex items-center justify-between px-8 py-4 max-w-[80rem] w-full">
         <Link href="/" className="">
           <motion.div whileHover={{ scale: 1.1 }}>
-            <Image src={Logo} alt={Logo} width={50} height={50} className="" />
+            <Image
+              src={Logo}
+              alt="logo sushi wasabi"
+              width={50}
+              height={50}
+              className=""
+            />
           </motion.div>
         </Link>
         <DesktopNav />
