@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Logo from "../../public/Wasabi sushi logo.png";
 import Link from "next/link";
-import { ChevronDownIcon, MenuIcon, PhoneIcon } from "lucide-react";
+import { MenuIcon, PhoneIcon } from "lucide-react";
 
 import {
   Sheet,
@@ -22,11 +22,6 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "../ui/accordion";
-import {
-  HoverCard,
-  HoverCardTrigger,
-  HoverCardContent,
-} from "../ui/hover-card";
 
 const mobTitleStyles = "text-lg py-2";
 
