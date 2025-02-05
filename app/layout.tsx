@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Starter manikam",
+  title: "Sushi Wasabi restoran",
   description: "starter za izradu sajta manikam",
   icons: {
-    icon: "/manikam.png",
-    apple: "/manikam.png",
+    icon: "/Wasabi sushi logo.png",
+    apple: "/Wasabi sushi logo.png",
   },
   keywords: ["", ""],
 };
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-muted bg-muted-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-muted-foreground bg-muted`}
       >
         <Header />
         {children}

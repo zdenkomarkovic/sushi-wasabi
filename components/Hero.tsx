@@ -5,22 +5,16 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-
 import Fade from "embla-carousel-fade";
 import Autoplay from "embla-carousel-autoplay";
-
 import Hero1 from "../public/hero1.jpg";
 import Hero2 from "../public/hero2.jpg";
-import Hero3 from "../public/hero3.jpg";
-
 import Image from "next/image";
-import { ArrowRightIcon } from "lucide-react";
-
 import Link from "next/link";
-
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
-const Hero = () => {
+const BgImage = () => {
   return (
     <div className="relative flex min-h-[100dvh]">
       <Carousel
@@ -51,46 +45,88 @@ const Hero = () => {
               className="w-full h-[100dvh] object-cover"
             />
           </CarouselItem>
-          <CarouselItem>
-            <Image
-              src={Hero3}
-              alt="Luksuzni plakar"
-              className="w-full h-[100dvh] object-cover"
-            />
-          </CarouselItem>
         </CarouselContent>
       </Carousel>
-      <div className="relative flex flex-col gap-6 w-full items-center justify-center text-white z-[1] text-center">
-        <h1 className="text-primary md:text-[4rem] text-xl font-bold max-w-[900px] leading-[1.2] px-4">
-          NASLOV
-        </h1>
-        <h2 className="text-background font-medium md:text-[1.5rem] text-md max-w-[800px] px-4">
-          PRATECI TEXT
-        </h2>
-        <div className="flex flex-col gap-4 md:flex-row">
-          <Link href="/proizvodi">
-            <motion.button
-              whileHover={{ translateY: "-5px" }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 bg-primary text-foreground px-4 py-2 md:px-8 md:py-3 rounded-lg font-medium"
-            >
-              Istražite naše proizvode
-              <ArrowRightIcon className="w-[18px]" />
-            </motion.button>
-          </Link>
-          <a href="tel:+3816000000">
-            <motion.button
-              whileHover={{ translateY: "-5px" }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-transparent border-background border-[1px] rounded-lg px-4 md:px-8 md:py-3 py-2 font-medium"
-            >
-              Pozovite odmah
-            </motion.button>
-          </a>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default Hero;
+export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
+  const words = title.split(" ");
+
+  return (
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
+      <div className="absolute inset-0">
+        {/* <FloatingPaths position={1} />
+        <FloatingPaths position={-1} /> */}
+        <BgImage />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter">
+            {words.map((word, wordIndex) => (
+              <span key={wordIndex} className="inline-block mr-4 last:mr-0">
+                {word.split("").map((letter, letterIndex) => (
+                  <motion.span
+                    key={`${wordIndex}-${letterIndex}`}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      delay: wordIndex * 0.1 + letterIndex * 0.03,
+                      type: "spring",
+                      stiffness: 150,
+                      damping: 25,
+                    }}
+                    className="inline-block text-primary bg-clip-text
+                                        bg-gradient-to-r from-neutral-900 to-neutral-700/80
+                                        dark:from-white dark:to-white/80"
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </span>
+            ))}
+          </h1>
+
+          <div
+            className="inline-block group relative bg-gradient-to-b from-black/10 to-white/10
+                        dark:from-white/10 dark:to-black/10 p-px rounded-2xl backdrop-blur-lg
+                        overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <Link
+              href={
+                "https://wolt.com/sr/srb/belgrade/restaurant/sushi-wasabi11"
+              }
+              target="_blank"
+            >
+              <Button
+                variant="ghost"
+                className="rounded-[1.15rem] px-8 py-6 text-lg font-semibold backdrop-blur-md
+                            bg-green-500/50 hover:bg-white/100 
+                            text-black  transition-all duration-300
+                            group-hover:-translate-y-0.5 border border-primary 
+                            hover:shadow-md "
+              >
+                <span className="opacity-90 group-hover:opacity-100 transition-opacity">
+                  Wolt dostava
+                </span>
+                <span
+                  className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5
+                                transition-all duration-300"
+                >
+                  →
+                </span>
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}

@@ -58,8 +58,8 @@ export default function Contact() {
   return (
     <div className="">
       <div className="container mx-auto pt-28 pb-16 px-6 md:px-8 md:py-32 space-y-12 md:space-y-24">
-        <h1 className="text-2xl md:text-5xl pl-2 md:px-32">
-          Kontakt starter manikam
+        <h1 className="text-2xl md:text-5xl pl-2 md:px-32 text-primary">
+          Sushi Wasabi
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
           <div className=" mx-2 md:mx-20">

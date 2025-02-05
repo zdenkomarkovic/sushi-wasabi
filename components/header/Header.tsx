@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "../../public/manikam.png";
+import Logo from "../../public/Wasabi sushi logo.png";
 import Link from "next/link";
 import { ChevronDownIcon, MenuIcon, PhoneIcon } from "lucide-react";
 
@@ -95,32 +95,6 @@ const MobileMenu = () => (
 const DesktopNav = () => (
   <ul className="hidden gap-8 lg:flex text-white text-xl">
     {navList.map((item, index) => {
-      if (item.list)
-        return (
-          <HoverCard key={index} openDelay={0} closeDelay={50}>
-            <HoverCardTrigger>
-              <motion.div
-                whileHover={{ color: "hsl(var(--primary))" }}
-                className="flex gap-1 transition-colors"
-              >
-                {item.title}
-                <ChevronDownIcon className="w-[18px]" />
-              </motion.div>
-            </HoverCardTrigger>
-            <HoverCardContent className="p-0">
-              {item.list.map((link, index2) => (
-                <motion.li
-                  key={`${index}.${index2}`}
-                  whileHover={{ backgroundColor: "hsl(var(--primary))" }}
-                >
-                  <Link className="px-2 py-2 block" href={link.link}>
-                    {link.title}
-                  </Link>
-                </motion.li>
-              ))}
-            </HoverCardContent>
-          </HoverCard>
-        );
       return (
         <Link key={index} href={item.link}>
           <motion.li
@@ -157,29 +131,25 @@ export default function Header() {
         scrolled
           ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md"
           : "bg-transparent"
-      }  fixed top-0 left-0 right-0 z-[10] transition-colors`}
+      }  fixed top-0 left-0 right-0 z-50 transition-colors`}
     >
       <nav className="flex items-center justify-between px-8 py-4 max-w-[80rem] w-full">
         <Link href="/" className="">
-          <Image
-            src={Logo}
-            alt="dm rustic 24"
-            width={50}
-            height={50}
-            className="rounded-full"
-          />
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Image src={Logo} alt={Logo} width={50} height={50} className="" />
+          </motion.div>
         </Link>
         <DesktopNav />
-        <Link href="tel:+3816">
+        <Link href="tel:+381603620051">
           <motion.button
             whileHover={{
               color: "hsl(var(--foreground))",
               backgroundColor: "hsl(var(--primary))",
             }}
-            className=" items-center justify-center rounded-full text-primary border-primary border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex"
+            className=" items-center justify-center rounded-full text-primary border-primary border-2 text-sm md:text-xl md:font-bold py-1 px-2 md:py-2 md:px-4 transition-colors flex"
           >
             <PhoneIcon />
-            <p className="">+38160 000 000</p>
+            <p className="">+38160 362 0051</p>
           </motion.button>
         </Link>
         <MobileMenu />
