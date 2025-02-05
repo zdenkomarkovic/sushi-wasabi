@@ -13,6 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import { PhoneIcon } from "lucide-react";
 
 const BgImage = () => {
   return (
@@ -67,7 +68,7 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto"
         >
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter">
             {words.map((word, wordIndex) => (
@@ -96,7 +97,7 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
 
           <div
             className="inline-block group relative bg-gradient-to-b from-black/10 to-white/10
-                        dark:from-white/10 dark:to-black/10 p-px rounded-2xl backdrop-blur-lg
+                        p-px rounded-2xl backdrop-blur-lg
                         overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
             <Link
@@ -113,18 +114,46 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
                             group-hover:-translate-y-0.5 border border-primary 
                             hover:shadow-md "
               >
-                <span className="opacity-90 group-hover:opacity-100 transition-opacity">
-                  Wolt dostava
-                </span>
-                <span
-                  className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5
-                                transition-all duration-300"
-                >
-                  →
+                <span className="opacity-90 group-hover:opacity-100 transition-opacity  flex gap-3 items-center">
+                  za dostavu pozovite
+                  <PhoneIcon /> +38160 362 0051
                 </span>
               </Button>
             </Link>
           </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="inline-block mt-10 group relative bg-gradient-to-b from-black/10 to-white/10
+                        p-px rounded-2xl backdrop-blur-lg
+                        overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <Link
+            href={"https://wolt.com/sr/srb/belgrade/restaurant/sushi-wasabi11"}
+            target="_blank"
+          >
+            <Button
+              variant="ghost"
+              className="rounded-[1.15rem] px-8 py-6 text-lg font-semibold backdrop-blur-md
+                            bg-green-500/50 hover:bg-white/100 
+                            text-black  transition-all duration-300
+                            group-hover:-translate-y-0.5 border border-primary 
+                            hover:shadow-md "
+            >
+              <span className="opacity-90 group-hover:opacity-100 transition-opacity">
+                Wolt dostava
+              </span>
+              <span
+                className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5
+                                transition-all duration-300"
+              >
+                {" "}
+                →
+              </span>
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </div>

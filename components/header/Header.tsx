@@ -49,7 +49,7 @@ const MobileMenu = () => (
 );
 
 const DesktopNav = () => (
-  <ul className="hidden gap-8 lg:flex text-white text-xl">
+  <ul className="hidden gap-8 lg:flex text-primary font-bold text-2xl">
     {navList.map((item, index) => {
       return (
         <Link key={index} href={item.link}>
