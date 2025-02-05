@@ -19,7 +19,7 @@ interface MenuBarProps {
 const MenuBar: React.FC<MenuBarProps> = ({ title, products }) => {
   return (
     <div>
-      <div className="container px-2 md:px-4 py-10 mx-auto space-y-10">
+      <div className="container px-4 py-10 mx-auto space-y-10">
         <h1 className="text-5xl">{title}</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6">
           {products.map((item) => {
