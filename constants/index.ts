@@ -3,11 +3,6 @@ export const navList = [
     title: "Početna",
     link: "/",
   },
-
-  {
-    title: "Proizvodi",
-    link: "/proizvodi",
-  },
   {
     title: "Kontakt",
     link: "/kontakt",
@@ -42,7 +37,7 @@ export const klasikRoll = [
   },
   {
     id: 4,
-    title: "Klasik Skampi",
+    title: "Klasik Škampi",
     price: 700,
     image: "/menu/wPT_Classic scampi.jpg",
   },
@@ -82,7 +77,7 @@ export const sushiNigiri = [
   },
   {
     id: 2,
-    title: "Sushi nigiri Skampi",
+    title: "Sushi nigiri Škampi",
     price: 240,
     image: "/menu/wPT_Nigiri skampi.jpg",
   },
@@ -133,9 +128,135 @@ export const gunkan = [
   },
   {
     id: 5,
-    title: "Gunkan Skampi",
+    title: "Gunkan Škampi",
     price: 250,
     image: "/menu/wPT_Gunkan skampi.jpg",
+  },
+];
+
+export interface TempuraRoll {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const tempuraRoll = [
+  {
+    id: 1,
+    title: "Tempura roll Wakizasi",
+    ingrediants: "kimči sos, krastavac, jegulja, losos",
+    price: 890,
+    image: "/menu/wPT_Classic losos.jpg",
+  },
+  {
+    id: 2,
+    title: "Tempura roll Bum bum ceri",
+    ingrediants: "losos, sir, unagi, susam, paradajz",
+    price: 840,
+    image: "/menu/wPT_Classic ljegulja.jpg",
+  },
+  {
+    id: 3,
+    title: "Tempura roll Kotor",
+    ingrediants: "sir, ananas, jegulja, sweet, čili",
+    price: 930,
+    image: "/menu/wPT_Classic tuna.jpg",
+  },
+  {
+    id: 4,
+    title: "Tempura roll Hokage",
+    ingrediants: "škampi, sir, spajsi sos, paprika, krastavac",
+    price: 860,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+];
+
+export interface ZapeceneRolnice {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const zapeceneRolnice = [
+  {
+    id: 1,
+    title: "Zapečene rolnice Cezar",
+    ingrediants: "paradajz, piletina, sir, beli sos, rukola",
+    price: 790,
+    image: "/menu/wPT_Classic losos.jpg",
+  },
+  {
+    id: 2,
+    title: "Zapečene rolnice Čikinero",
+    ingrediants:
+      "luk fri, šitake, spajsi sos, parmezan, sweet čili, paradajz, piletina",
+    price: 810,
+    image: "/menu/wPT_Classic ljegulja.jpg",
+  },
+  {
+    id: 3,
+    title: "Zapečene rolnice Ojama",
+    ingrediants: "krastavac, losos, sir, beli sos, crni susam",
+    price: 840,
+    image: "/menu/wPT_Classic tuna.jpg",
+  },
+  {
+    id: 4,
+    title: "Zapečene rolnice Nokhaido",
+    ingrediants: "tobiko, jegulja, sir, avokado, losos, spajsi",
+    price: 950,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 5,
+    title: "Zapečene rolnice Fudži",
+    ingrediants:
+      "sir, krastavac, susam, škampi sos, parmezan, mladi luk, losos",
+    price: 910,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+];
+
+export interface VegeRoll {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const vegeRoll = [
+  {
+    id: 1,
+    title: "Vege roll Uzumaki",
+    ingrediants: "susam, krastavac, paprika, sos orah, avokado",
+    price: 780,
+    image: "/menu/wPT_Classic losos.jpg",
+  },
+  {
+    id: 2,
+    title: "Vege roll Zamami",
+    ingrediants: " paradajz, susam, avokado, krastavac, šitake, cuka",
+    price: 800,
+    image: "/menu/wPT_Classic ljegulja.jpg",
+  },
+  {
+    id: 3,
+    title: "Vege roll Kawasaki",
+    ingrediants: "mirodjija, tofu,luk fri, krastavac, guakamoli",
+    price: 790,
+    image: "/menu/wPT_Classic tuna.jpg",
+  },
+  {
+    id: 4,
+    title: "Vege roll Mina",
+    ingrediants: "cuka, paprika, sitake, tofu, slice krastavac, sweet čili",
+    price: 780,
+    image: "/menu/wPT_Classic scampi.jpg",
   },
 ];
 
@@ -143,6 +264,7 @@ export const nesto = [
   {
     id: 1,
     title: "Losos",
+    ingrediants: "",
     price: 640,
     image: "/menu/wPT_Classic losos.jpg",
   },

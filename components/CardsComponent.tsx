@@ -17,7 +17,7 @@ interface MenuBarProps {
   products: Product[];
 }
 
-const MenuBar: React.FC<MenuBarProps> = ({ title, products }) => {
+const CardsComponent: React.FC<MenuBarProps> = ({ title, products }) => {
   const [showImage, setShowImage] = useState<string | null>(null);
 
   return (
@@ -37,7 +37,11 @@ const MenuBar: React.FC<MenuBarProps> = ({ title, products }) => {
                 className="flex justify-between rounded-lg bg-white p-3"
               >
                 <div className="flex flex-col justify-between">
-                  <h3 className="">{item.title}</h3>
+                  <div>
+                    {" "}
+                    <h3 className="font-bold">{item.title}</h3>
+                    {item.ingrediants ? <p>{item.ingrediants}</p> : ""}
+                  </div>
                   <p className="text-primary">{item.price}.00 RSD</p>
                 </div>
 
@@ -65,4 +69,4 @@ const MenuBar: React.FC<MenuBarProps> = ({ title, products }) => {
   );
 };
 
-export default MenuBar;
+export default CardsComponent;

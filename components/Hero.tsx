@@ -30,7 +30,7 @@ const BgImage = () => {
           Fade(),
         ]}
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-muted/30 z-[1]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-muted/50 z-[1]" />
         <CarouselContent>
           <CarouselItem>
             <Image
@@ -82,9 +82,8 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
                       stiffness: 150,
                       damping: 25,
                     }}
-                    className="inline-block text-primary bg-clip-text
-                                        bg-gradient-to-r from-neutral-900 to-neutral-700/80
-                                        dark:from-white dark:to-white/80"
+                    className="inline-block text-black bg-clip-text
+                                        bg-gradient-to-r from-neutral-900 to-neutral-700/80"
                   >
                     {letter}
                   </motion.span>
@@ -98,12 +97,7 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
                         p-px rounded-2xl backdrop-blur-lg
                         overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <Link
-              href={
-                "https://wolt.com/sr/srb/belgrade/restaurant/sushi-wasabi11"
-              }
-              target="_blank"
-            >
+            <Link href="tel:+381603620051" target="_blank">
               <Button
                 variant="ghost"
                 className="rounded-[1.15rem] px-3 md:px-8 py-5 md:py-6 text-base md:text-lg font-semibold backdrop-blur-md
