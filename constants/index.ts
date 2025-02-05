@@ -247,7 +247,7 @@ export const vegeRoll = [
   {
     id: 3,
     title: "Vege roll Kawasaki",
-    ingrediants: "mirodjija, tofu,luk fri, krastavac, guakamoli",
+    ingrediants: "mirodjija, tofu, luk fri, krastavac, guakamoli",
     price: 790,
     image: "/menu/wPT_Classic tuna.jpg",
   },
@@ -257,6 +257,67 @@ export const vegeRoll = [
     ingrediants: "cuka, paprika, sitake, tofu, slice krastavac, sweet čili",
     price: 780,
     image: "/menu/wPT_Classic scampi.jpg",
+  },
+];
+
+export interface FitRoll {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const fitRoll = [
+  {
+    id: 1,
+    title: "Fit roll Omega",
+    ingrediants: "slice krastavac, avokado, losos, tobiko",
+    price: 890,
+    image: "/menu/wPT_Classic losos.jpg",
+  },
+  {
+    id: 2,
+    title: "Fit roll Unagi",
+    ingrediants: "susam, jegulja, krastavac, unagi",
+    price: 890,
+    image: "/menu/wPT_Classic ljegulja.jpg",
+  },
+  {
+    id: 3,
+    title: "Fit roll Rukotuna",
+    ingrediants: "tuna, rukola, luk fri, avokado",
+    price: 910,
+    image: "/menu/wPT_Classic tuna.jpg",
+  },
+  {
+    id: 4,
+    title: "Fit roll Akimbo",
+    ingrediants: "škampi, losos, rukola, slice krastavac, mango sos",
+    price: 910,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 5,
+    title: "Fit roll Energy fit",
+    price: 930,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+];
+export interface GiozeSkampi {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const giozeSkampi = [
+  {
+    id: 1,
+    title: "Gioze škampi",
+    price: 1500,
+    image: "/menu/wPT_Classic losos.jpg",
   },
 ];
 
