@@ -300,14 +300,15 @@ export const fitRoll = [
   {
     id: 5,
     title: "Fit roll Energy fit",
+    ingrediants: "mirodjija, losos, tuna, avokado, zeleni sos",
     price: 930,
     image: "/menu/wPT_Classic scampi.jpg",
   },
 ];
+
 export interface GiozeSkampi {
   id: number;
   title: string;
-  ingrediants: string;
   price: number;
   image: string;
 }
@@ -321,81 +322,354 @@ export const giozeSkampi = [
   },
 ];
 
-export const nesto = [
+export interface UroMakiWasabi {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const uroMakiWasabi = [
   {
     id: 1,
-    title: "Losos",
-    ingrediants: "",
-    price: 640,
+    title: "Uro maki wasabi Filadelfija avokado",
+    ingrediants: "sir, avokado, losos",
+    price: 890,
     image: "/menu/wPT_Classic losos.jpg",
   },
   {
     id: 2,
-    title: "Jegulja",
-    price: 690,
+    title: "Uro maki wasabi Kalifornija losos",
+    ingrediants: "sir, avokado, losos, tobiko",
+    price: 890,
     image: "/menu/wPT_Classic ljegulja.jpg",
   },
   {
     id: 3,
-    title: "Tuna ",
-    price: 670,
+    title: "Uro maki wasabi Kalifornija klasik",
+    ingrediants: "majonez tobiko, kraba, krastavac, tobiko",
+    price: 790,
     image: "/menu/wPT_Classic tuna.jpg",
   },
   {
     id: 4,
-    title: "Skampi",
-    price: 700,
+    title: "Uro maki wasabi Canada",
+    ingrediants: "sir, jegulja, krastavac, losos",
+    price: 990,
     image: "/menu/wPT_Classic scampi.jpg",
   },
   {
     id: 5,
-    title: "Krastavac",
-    price: 430,
-    image: "/menu/wPT_Classic losos.jpg",
+    title: "Uro maki wasabi Sombrero",
+    ingrediants: "spajsi sos, škampi, krastavac, guakamoli",
+    price: 830,
+    image: "/menu/wPT_Classic scampi.jpg",
   },
   {
     id: 6,
-    title: "Avokado",
-    price: 520,
-    image: "/menu/wPT_Classic avokado.jpg",
+    title: "Uro maki wasabi Flamingo",
+    ingrediants: "guakamoli, losos, tuna, krastavac, avokado",
+    price: 870,
+    image: "/menu/wPT_Classic scampi.jpg",
   },
   {
     id: 7,
-    title: "Kraba spajsi",
-    price: 560,
-    image: "/menu/wPT_Classic spicy craba.jpg",
+    title: "Uro maki wasabi Bonito",
+    ingrediants: "strugotina tune, tuka, sir, krastavac, spajsi sos",
+    price: 850,
+    image: "/menu/wPT_Classic scampi.jpg",
   },
   {
     id: 8,
+    title: "Uro maki wasabi Crispi",
+    ingrediants: "luk fri, sir, skampi tempura, krastavac, spajsi",
+    price: 880,
+    image: "/menu/wPT_Classic scampi.jpg",
   },
   {
     id: 9,
+    title: "Uro maki wasabi Grinch",
+    ingrediants: "sir, tuna, krastavac, mirodjija, zeleni sos",
+    price: 830,
+    image: "/menu/wPT_Classic scampi.jpg",
   },
   {
     id: 10,
+    title: "Uro maki wasabi Samuraj",
+    ingrediants: "susam, sir, skampi, losos, unagi",
+    price: 870,
+    image: "/menu/wPT_Classic scampi.jpg",
   },
   {
     id: 11,
+    title: "Uro maki wasabi Crispi losos",
+    ingrediants:
+      "hrskavi losos, rukola, mladi luk, krastavac, spajsi sos, tobiko",
+    price: 930,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+];
+
+export interface Supe {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const supe = [
+  {
+    id: 1,
+    title: "Ramen",
+    ingrediants: "bujon, piletina, rezance, jaja, mladi luk",
+    price: 690,
+    image: "/menu/wPT_Classic losos.jpg",
   },
   {
-    id: 12,
+    id: 2,
+    title: "Miso",
+    ingrediants: "wakame, tofu, šitake pečurke, mladi luk, susam",
+    price: 590,
+    image: "/menu/wPT_Classic ljegulja.jpg",
   },
   {
-    id: 13,
+    id: 3,
+    title: "Suimono",
+    ingrediants: "bujon, škampi, wakame, losos, mladi luk",
+    price: 730,
+    image: "/menu/wPT_Classic tuna.jpg",
+  },
+];
+
+export interface Salate {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const salate = [
+  {
+    id: 1,
+    title: "Hijasiwakame",
+    ingrediants: "cuka, paprika, krastavac, gawadari sos",
+    price: 680,
+    image: "/menu/wPT_Classic losos.jpg",
   },
   {
-    id: 14,
+    id: 2,
+    title: "Sejšeli",
+    ingrediants: "losos, avokado, rukola, krastavac, limun sok",
+    price: 780,
+    image: "/menu/wPT_Classic ljegulja.jpg",
   },
   {
-    id: 15,
+    id: 3,
+    title: "Azijski krastavac",
+    ingrediants: "beli luk, soja sos, prženi kikiriki, krastavac",
+    price: 650,
+    image: "/menu/wPT_Classic tuna.jpg",
   },
   {
-    id: 16,
+    id: 4,
+    title: "Enoka",
+    ingrediants: "soja sos, beli luk, riblji sos, pasta katuran, čili pasta",
+    price: 720,
+    image: "/menu/wPT_Classic scampi.jpg",
   },
   {
-    id: 17,
+    id: 5,
+    title: "Patlidžan",
+    ingrediants: "fri patlidžan, rukola, čili sos",
+    price: 700,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+];
+
+export interface Tartar {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+}
+
+export const tartar = [
+  {
+    id: 1,
+    title: "Tartar losos",
+    price: 950,
+    image: "/menu/wPT_Classic losos.jpg",
   },
   {
-    id: 18,
+    id: 2,
+    title: "Tartar tuna",
+    price: 1000,
+    image: "/menu/wPT_Classic ljegulja.jpg",
+  },
+];
+export interface Dezert {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+}
+
+export const dezert = [
+  {
+    id: 1,
+    title: "Rafaelo",
+    price: 770,
+    image: "/menu/wPT_Classic losos.jpg",
+  },
+  {
+    id: 2,
+    title: "Tuti fruti",
+    price: 770,
+    image: "/menu/wPT_Classic ljegulja.jpg",
+  },
+];
+
+export interface Setovi {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const setovi = [
+  {
+    id: 1,
+    title: "Very easy 1 - posno",
+    ingrediants: "klasik, uzumaki",
+    price: 1100,
+    image: "/menu/wPT_Classic losos.jpg",
+  },
+  {
+    id: 2,
+    title: "Very easy 2",
+    ingrediants: "fila avokado, 2x sushi losos",
+    price: 1080,
+    image: "/menu/wPT_Classic ljegulja.jpg",
+  },
+  {
+    id: 3,
+    title: "Easy 1",
+    ingrediants: "Fila avokado, Sombrero, Guakam tuna",
+    price: 1990,
+    image: "/menu/wPT_Classic tuna.jpg",
+  },
+  {
+    id: 4,
+    title: "Easy 2",
+    ingrediants: "rukotuna, omega, guakam cuka",
+    price: 1950,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 5,
+    title: "Medium 1",
+    ingrediants: "Nakijasi, krispi, cezar, klasik avokado",
+    price: 2700,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 6,
+    title: "Medium 2",
+    ingrediants: "tuna clasic, cikinero, energy fit, flamingo",
+    price: 2850,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 7,
+    title: "Hard 1",
+    ingrediants: "klasik skampi, california klasik, canada, cezar, fudzi",
+    price: 3880,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 8,
+    title: "Hard 2",
+    ingrediants: "klasik losos, bum bum ceri, kotor, bonito, grinc",
+    price: 3760,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 9,
+    title: "Extreme",
+    ingrediants:
+      "klasik losos, klasik avokado, osama, hokage, rukotuna, akimbo, kawasaki, krispi, fila avokado",
+    price: 6890,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+];
+
+export interface Pice {
+  id: number;
+  title: string;
+  ingrediants: string;
+  price: number;
+  image: string;
+}
+
+export const pice = [
+  {
+    id: 1,
+    title: "Rosa 0.5l",
+    ingrediants: "klasik, uzumaki",
+    price: 200,
+    image: "/menu/wPT_Classic losos.jpg",
+  },
+  {
+    id: 2,
+    title: "Knjiz Milos 0.5l",
+    ingrediants: "fila avokado, 2x sushi losos",
+    price: 290,
+    image: "/menu/wPT_Classic ljegulja.jpg",
+  },
+  {
+    id: 3,
+    title: "Coca Cola 0.33l",
+    ingrediants: "Fila avokado, Sombrero, Guakam tuna",
+    price: 290,
+    image: "/menu/wPT_Classic tuna.jpg",
+  },
+  {
+    id: 4,
+    title: "Coca Cola zero 0.33l",
+    ingrediants: "rukotuna, omega, guakam cuka",
+    price: 290,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 5,
+    title: "Orangina 0.33l",
+    ingrediants: "Nakijasi, krispi, cezar, klasik avokado",
+    price: 290,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 6,
+    title: "Fuze tea peach 0.5l",
+    ingrediants: "tuna clasic, cikinero, energy fit, flamingo",
+    price: 290,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 7,
+    title: "Red Bull",
+    ingrediants: "klasik skampi, california klasik, canada, cezar, fudzi",
+    price: 300,
+    image: "/menu/wPT_Classic scampi.jpg",
+  },
+  {
+    id: 8,
+    title: "Pivo Kirin",
+    ingrediants: "klasik losos, bum bum ceri, kotor, bonito, grinc",
+    price: 550,
+    image: "/menu/wPT_Classic scampi.jpg",
   },
 ];
