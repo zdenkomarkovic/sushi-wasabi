@@ -17,7 +17,7 @@ import { PhoneIcon } from "lucide-react";
 
 const BgImage = () => {
   return (
-    <div className="relative flex min-h-[100dvh]">
+    <div className="relative flex min-h-[99dvh]">
       <Carousel
         className="absolute top-0 left-0 w-full h-[100dvh] z-[0]"
         opts={{ loop: true }}
