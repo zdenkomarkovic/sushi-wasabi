@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Facebook, Mail } from "lucide-react";
+import { RiTiktokLine } from "react-icons/ri";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Molimo unesite vase ime i prezime" }),
@@ -65,30 +66,30 @@ export default function Contact() {
           <div className=" mx-2 md:mx-20">
             <div className="space-y-3 md:space-y-10 text-lg md:text-2xl">
               <a
-                href="tel:+3816"
+                href="tel:+381603620051"
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   <FaPhone className="text-[20px] lg:text-[30px]" />
-                  +38160 000 000
+                  +381603620051
                 </button>
               </a>
               <a
-                href="viber://chat?number=%2B3816"
+                href="viber://chat?number=%2B381603620051"
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   <FaViber className="text-[28px] lg:text-[35px] p-1 bg-purple-600 text-white rounded-xl rounde" />{" "}
-                  +38160 000 000
+                  +381603620051
                 </button>
               </a>
               <a
-                href="https://wa.me/3816"
+                href="https://wa.me/381603620051"
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   <FaWhatsappSquare className="text-[30px] lg:text-[35px] rounded-2xl text-green-700 " />{" "}
-                  +38160 000 000
+                  +381603620051
                 </button>
               </a>
               <a
@@ -97,11 +98,11 @@ export default function Contact() {
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   <Mail className=" w-[28px] h-[28px]" />{" "}
-                  startermanikam@gmail.com
+                  sushiandwokwasabi@gmail.com
                 </button>
               </a>
               <a
-                href=""
+                href="https://www.instagram.com/wasabi_sushi_beograd/profilecard/?igsh=MWhna3hkbXNpeWt0bQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-[7px] flex border-b-[1px] border-primary "
@@ -109,19 +110,19 @@ export default function Contact() {
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   {" "}
                   <FaInstagram className=" text-[28px] lg:text-[30px]" />
-                  manikam_starter
+                  wasabi_sushi_beograd
                 </button>
               </a>
               <a
-                href=""
+                href="http://www.tiktok.com/@wasabibeograd?_t=zm-8tksuxjecqd&_r=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-[7px] flex border-b-[1px] border-primary "
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
                   {" "}
-                  <Facebook className=" text-[28px] lg:text-[30px]" />
-                  Manikam Starter
+                  <RiTiktokLine className=" text-[28px] lg:text-[30px]" />
+                  Wasabibeograd
                 </button>
               </a>
             </div>
@@ -130,7 +131,7 @@ export default function Contact() {
           <div className="mx-2 md:mx-20 rounded-3xl ">
             <Form {...form}>
               <form
-                className="grid grid-cols-3 items-center p-4 lg:p-10 shadow-xl shadow-primary rounded-xl"
+                className="grid grid-cols-3 items-center p-4 lg:p-10 shadow-lg shadow-primary rounded-xl"
                 onSubmit={form.handleSubmit(onSubmit)}
               >
                 <div className="col-span-3 flex flex-col gap-4 lg:col-span-3 lg:gap-8">

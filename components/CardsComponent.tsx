@@ -23,7 +23,7 @@ const CardsComponent: React.FC<MenuBarProps> = ({ title, products }) => {
 
   return (
     <div>
-      <div className="container px-4 pt-10 mx-auto space-y-10">
+      <div id={title} className="container px-4 pt-10 mx-auto space-y-10">
         <h1 className="text-5xl">{title}</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6">
           {products.map((item) => {

@@ -22,7 +22,7 @@ const mobTitleStyles = "text-lg py-2";
 const MobileMenu = () => (
   <Sheet>
     <SheetTrigger className="lg:hidden">
-      <MenuIcon className="text-black cursor-pointer" />
+      <MenuIcon className="text-primary cursor-pointer" />
     </SheetTrigger>
     <SheetContent>
       <SheetHeader>
