@@ -19,7 +19,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Facebook, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { RiTiktokLine } from "react-icons/ri";
 
 const contactFormSchema = z.object({
