@@ -33,7 +33,7 @@ const CardsComponent: React.FC<MenuBarProps> = ({ title, products }) => {
         <motion.h1
           whileHover={showProducts ? {} : { scale: 1.05 }}
           onClick={() => setShowProducts(!showProducts)}
-          className="text-5xl cursor-pointer hover:text-primary "
+          className="text-4xl md:text-5xl cursor-pointer hover:text-primary "
         >
           {title}
         </motion.h1>

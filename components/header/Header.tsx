@@ -49,7 +49,7 @@ const MobileMenu = () => (
 );
 
 const DesktopNav = () => (
-  <ul className="hidden gap-8 lg:flex text-primary+ font-bold text-2xl">
+  <ul className="hidden gap-8 lg:flex text-primary font-bold text-2xl">
     {navList.map((item, index) => {
       return (
         <Link key={index} href={item.link}>
@@ -106,7 +106,7 @@ export default function Header() {
               color: "hsl(var(--foreground))",
               backgroundColor: "hsl(var(--primary))",
             }}
-            className=" items-center justify-center rounded-full text-primary  border-2 border-primary text-sm md:text-xl md:font-bold py-1 px-2 md:py-2 md:px-4 transition-colors flex"
+            className=" items-center justify-center rounded-full text-white bg-primary  text-sm md:text-xl md:font-bold py-1 px-2 md:py-2 md:px-4 transition-colors flex"
           >
             <PhoneIcon />
             <p className="">+38160 362 0051</p>
