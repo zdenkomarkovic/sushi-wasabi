@@ -27,13 +27,13 @@ const CardsComponent: React.FC<MenuBarProps> = ({ title, products }) => {
       <div
         id={title}
         className={`${
-          showProducts ? "" : "flex"
+          showProducts ? "" : "flex border-b-2"
         } container px-4 pt-10 mx-auto space-y-10 `}
       >
         <motion.h1
-          whileHover={{ scale: 1.05 }}
+          whileHover={showProducts ? {} : { scale: 1.05 }}
           onClick={() => setShowProducts(!showProducts)}
-          className="text-5xl cursor-pointer hover:text-primary"
+          className="text-5xl cursor-pointer hover:text-primary "
         >
           {title}
         </motion.h1>
@@ -42,7 +42,7 @@ const CardsComponent: React.FC<MenuBarProps> = ({ title, products }) => {
             showProducts
               ? "grid grid-cols-1 md:grid-cols-3  gap-x-4 gap-y-6"
               : "hidden"
-          }`}
+          } `}
         >
           {products.map((item) => {
             return (
