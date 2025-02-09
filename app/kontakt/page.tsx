@@ -93,12 +93,11 @@ export default function Contact() {
                 </button>
               </a>
               <a
-                href="mailto:"
+                href="mailto:zvonkowasabi@gmail.com"
                 className="py-[7px] flex border-b-[1px] border-primary"
               >
                 <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
-                  <Mail className=" w-[28px] h-[28px]" />{" "}
-                  sushiandwokwasabi@gmail.com
+                  <Mail className=" w-[28px] h-[28px]" /> zvonkowasabi@gmail.com
                 </button>
               </a>
               <a

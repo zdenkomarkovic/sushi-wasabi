@@ -33,12 +33,14 @@ export default function Footer() {
             <div>
               {" "}
               <a href="tel:+381603620051">
-                <p className="">Telefon: +38160 362 0051</p>
+                <p className="hover:text-primary">Telefon: +38160 362 0051</p>
               </a>
             </div>
             <div>
-              <a href="mailto:sushiandwokwasabi@gmail.com">
-                <p className=" text-wrap">Email: sushiandwokwasabi@gmail.com</p>
+              <a href="mailto:zvonkowasabi@gmail.com">
+                <p className=" text-wrap hover:text-primary">
+                  Email: zvonkowasabi@gmail.com
+                </p>
               </a>
             </div>
             <div className="flex space-x-4 justify-center md:justify-start">
