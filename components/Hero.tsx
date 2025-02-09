@@ -7,10 +7,6 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { PhoneIcon } from "lucide-react";
 
-const BgImage = () => {
-  return <div className="relative flex min-h-[100dvh]"></div>;
-};
-
 export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
   const words = title.split(" ");
 
