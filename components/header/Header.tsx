@@ -106,7 +106,7 @@ export default function Header() {
               color: "hsl(var(--foreground))",
               backgroundColor: "hsl(var(--primary))",
             }}
-            className=" items-center justify-center rounded-full text-muted bg-primary border-2 text-sm md:text-xl md:font-bold py-1 px-2 md:py-2 md:px-4 transition-colors flex"
+            className=" items-center justify-center rounded-full text-primary  border-2 text-sm md:text-xl md:font-bold py-1 px-2 md:py-2 md:px-4 transition-colors flex"
           >
             <PhoneIcon />
             <p className="">+38160 362 0051</p>
