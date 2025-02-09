@@ -20,12 +20,30 @@ interface MenuBarProps {
 
 const CardsComponent: React.FC<MenuBarProps> = ({ title, products }) => {
   const [showImage, setShowImage] = useState<string | null>(null);
+  const [showProducts, setShowProducts] = useState(false);
 
   return (
     <div>
-      <div id={title} className="container px-4 pt-10 mx-auto space-y-10">
-        <h1 className="text-5xl">{title}</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-6">
+      <div
+        id={title}
+        className={`${
+          showProducts ? "" : "flex"
+        } container px-4 pt-10 mx-auto space-y-10 `}
+      >
+        <motion.h1
+          whileHover={{ scale: 1.05 }}
+          onClick={() => setShowProducts(!showProducts)}
+          className="text-5xl cursor-pointer hover:text-primary"
+        >
+          {title}
+        </motion.h1>
+        <div
+          className={`${
+            showProducts
+              ? "grid grid-cols-1 md:grid-cols-3  gap-x-4 gap-y-6"
+              : "hidden"
+          }`}
+        >
           {products.map((item) => {
             return (
               <motion.div
