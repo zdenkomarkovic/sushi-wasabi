@@ -75,6 +75,15 @@ export default function Contact() {
                 </button>
               </a>
               <a
+                href="tel:+381638443989"
+                className="py-[7px] flex border-b-[1px] border-primary"
+              >
+                <button className="hover:scale-110 transition-transform duration-500 px-4 md:px-8 flex gap-4 items-center">
+                  <FaPhone className="text-[20px] lg:text-[30px]" />
+                  +38163 844 3989
+                </button>
+              </a>
+              <a
                 href="viber://chat?number=%2B381603620051"
                 className="py-[7px] flex border-b-[1px] border-primary"
               >

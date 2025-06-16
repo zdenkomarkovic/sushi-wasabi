@@ -41,7 +41,7 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
                       stiffness: 150,
                       damping: 25,
                     }}
-                    className="inline-block text-primary bg-clip-text
+                    className="inline-block  bg-clip-text
                                         bg-gradient-to-r from-neutral-900 to-neutral-700/80"
                   >
                     {letter}
@@ -71,6 +71,29 @@ export default function Hero({ title = "Sushi  Wasabi" }: { title?: string }) {
                 </span>
               </Button>
             </Link>
+          </div>
+          <div>
+            <div
+              className="inline-block group relative bg-gradient-to-b from-black/10 to-white/10
+                        p-px rounded-2xl backdrop-blur-lg
+                        overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <Link href="tel:+381638443989" target="_blank">
+                <Button
+                  variant="ghost"
+                  className="rounded-[1.15rem] px-3 md:px-8 py-5 md:py-6 text-base md:text-lg font-semibold backdrop-blur-md
+                            bg-primary hover:bg-white/100 
+                            text-white  transition-all duration-300
+                            group-hover:-translate-y-0.5 border border-primary 
+                            hover:shadow-md "
+                >
+                  <span className="opacity-90 group-hover:opacity-100 transition-opacity  flex gap-1 md:gap-3 items-center">
+                    za dostavu pozovite
+                    <PhoneIcon /> +38163 844 3989
+                  </span>
+                </Button>
+              </Link>
+            </div>
           </div>
         </motion.div>
         <motion.div

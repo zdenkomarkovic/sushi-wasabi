@@ -35,6 +35,9 @@ export default function Footer() {
               <a href="tel:+381603620051">
                 <p className="hover:text-primary">Telefon: +38160 362 0051</p>
               </a>
+              <a href="tel:+381638443989">
+                <p className="hover:text-primary">Telefon: +38163 844 3989</p>
+              </a>
             </div>
             <div>
               <a href="mailto:zvonkowasabi@gmail.com">
